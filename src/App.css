@@ -1,38 +1,183 @@
 .App {
-  text-align: center;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 22% 1fr;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Sidbar */
+
+.sidebar {
+ background-color: antiquewhite;
+ display: grid;
+ grid-template-rows: auto auto 1fr;
+ padding: 2rem;
+ grid-row-gap: 1rem;;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*NavBar Options*/
+
+.options ul {
+ list-style-type: none;
+ text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.options li {
+  width: 80%;
+  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+/*Score*/
+
+.score {
+  display: grid;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.score-table {
+  display: grid;
+  grid-template:
+  "player1 p1score" auto
+  "player2 p2score" auto
+  "player3 p3score" auto
+  "player4 p4score" auto /
+  50% 30%;
 }
+
+.score-table div {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+/*betting*/
+.betting {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.table {
+  background-color: green;
+  display: grid;
+  grid-template:
+   ". player3 ." auto
+   "player2 play-area player4" 1fr
+   "player1 player1 player1" auto /
+   auto 1fr auto;
+}
+
+.player1 {
+  grid-area: player1;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+}
+
+.player2 {
+  grid-area: player2;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.player3 {
+  grid-area: player3;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.player4 {
+  grid-area: player4;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.play-area {
+  grid-area: play-area;
+  position: relative;
+}
+
+.table div {
+  border: black solid 1px;
+  padding: 1rem;
+}
+
+img {
+  height: 150px;
+}
+
+
+/*Table*/
+
+/* Card Areas */
+
+.score-grid {
+  display: grid;
+  grid-template: 
+    "player player" 33%
+    "betted hands" 33%
+    "betted-value hands-value" 33% /
+    50% 50%;
+  width: fit-content;
+  height: fit-content;
+}
+
+.player {
+  grid-area: player;
+}
+
+.betted {
+  grid-area: betted;
+}
+
+.hands {
+  grid-area: hands;
+}
+
+.betted-value {
+  grid-area: betted-value;
+}
+
+.hands-value {
+  grid-area: hands-value;
+}
+
+
+
+/*Playing Area*/
+
+.player1-played {
+  position: absolute;
+  left: 45%;
+  top: 60%;
+}
+
+.player2-played {
+  position: absolute;
+  left: 30%;
+  top: 40%;
+}
+
+.player3-played {
+  position: absolute;
+  left: 45%;
+  top: 15%;
+}
+
+.player4-played {
+  position: absolute;
+  left: 60%;
+  top: 40%;
+}
+
+.played-card {
+  height: 150px;
+  width: 100px;
+  padding: 0px;
+}
+
+
+
