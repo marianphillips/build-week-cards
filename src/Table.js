@@ -39,12 +39,7 @@ export default function Table(props) {
       winningCard = normalWinningHand[0];
     }
 
-    let player = "";
-
-    if (cardsArray.indexOf(winningCard) === 0) player = "player1";
-    if (cardsArray.indexOf(winningCard) === 1) player = "player2";
-    if (cardsArray.indexOf(winningCard) === 2) player = "player3";
-    if (cardsArray.indexOf(winningCard) === 3) player = "player4";
+    const player = playerOrder[cardsArray.indexOf(winningCard)]
 
     const alreadyWon = player === dealer;
 
@@ -126,9 +121,9 @@ export default function Table(props) {
         const cardsOfSuit = props.playerInfo.player1.cards.filter(
           (card) => card.suit === playedCards[dealer].suit
         ).length;
-        console.log(cardsOfSuit);
         if (cardsOfSuit > 0) {
           if (props.playerInfo.player1.cards[key].suit !== playedCards[dealer].suit) {
+            //need some code here to tell player to follow suit
             console.log("follow suit");
           }
           if (props.playerInfo.player1.cards[key].suit === playedCards[dealer].suit) {
@@ -158,8 +153,10 @@ export default function Table(props) {
     props.setNewRound(true);
     props.setSuit(suitOrder[props.round]);
     props.setNumberOfCards(props.numberOfCards - 1);
-    setPlayerTurn("player1")
-    setDealer('player1');
+
+    setTimeout(() => {
+    setPlayerTurn('player1')
+    setDealer('player1')}, 1000)
   };
 
   const endOfRoundScores = () => {
