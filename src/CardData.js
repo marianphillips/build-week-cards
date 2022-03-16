@@ -57,8 +57,11 @@ const cardsAddBetting = ['JD', 'QD', 'KD', 'AD', 'JH', 'QH', 'KH', 'AH', 'JS', '
 
 const suitOrder = ['CLUBS', 'DIAMONDS', 'HEARTS', 'SPADES', 'NONE', 'CLUBS', 'DIAMONDS', 'HEARTS', 'SPADES', 'NONE']
 
+const playerOrder = ['player1', 'player2', 'player3', 'player4', 'player1']
+
 module.exports = {
     cardData: cardData,
     cardsAddBetting: cardsAddBetting,
-    suitOrder: suitOrder
+    suitOrder: suitOrder,
+    playerOrder: playerOrder
 } 
