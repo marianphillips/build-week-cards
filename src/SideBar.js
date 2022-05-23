@@ -12,7 +12,7 @@ export default function SideBar(props) {
         <section className="options">
         <ul>
             <li onClick={handleNewGame}>New Game</li>
-            <li>Rules</li>
+            <li>Testing deploy</li>
         </ul>
         </section>
         
