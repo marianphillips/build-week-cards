@@ -53,7 +53,7 @@ const cardData = {
     "AS" : 52
 }
 
-const cardsAddBetting = ['JD', 'QD', 'KD', 'AD', 'JH', 'QH', 'KH', 'AH', 'JS', 'QS', 'KS', 'AS', 'JC', 'QC', 'KC', 'AC',]
+const cardsAddBetting = ['JD', 'QD', 'KD', 'AD', 'JH', 'QH', 'KH', 'AH', 'JS', 'QS', 'KS', 'AS', 'JC', 'QC', 'KC', 'AC']
 
 const suitOrder = ['CLUBS', 'DIAMONDS', 'HEARTS', 'SPADES', 'NONE', 'CLUBS', 'DIAMONDS', 'HEARTS', 'SPADES', 'NONE']
 

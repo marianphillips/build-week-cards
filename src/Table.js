@@ -146,8 +146,9 @@ export default function Table(props) {
   const endOfRoundLogic = () => {
     if (props.round === 10) {
       console.log("End of Game");
-      return;
+      endOfGameLogic()
     }
+    else {
     endOfRoundScores();
     props.setRound(props.round + 1);
     props.setNewRound(true);
@@ -157,6 +158,7 @@ export default function Table(props) {
     setTimeout(() => {
     setPlayerTurn('player1')
     setDealer('player1')}, 1000)
+    }
   };
 
   const endOfRoundScores = () => {
@@ -186,6 +188,18 @@ export default function Table(props) {
       },
     });
   };
+
+  const endOfGameLogic = () => {
+    console.log("end of game")
+    const scoreArray = [props.playerInfo.player1.score, props.playerInfo.player2.score, props.playerInfo.player3.score, props.playerInfo.player4.score]
+    const highestScore = Math.max(...scoreArray)
+
+
+  }
+
+  const newGame = () => {
+    
+  }
 
   return (
     <div className='table'>
